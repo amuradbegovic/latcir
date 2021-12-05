@@ -1,9 +1,14 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 
-	fmt.Printf("Hello, World!\n")
+	var c rune = 'B'
+	if c == rune('B') {
+		fmt.Printf("Б")
+	}
 
 }
