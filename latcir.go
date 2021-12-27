@@ -19,22 +19,22 @@ func main() {
 
 	for i, c := range input {
 
-		if c == rune('L') && (input[i+1] == rune('J') || input[i+1] == 'j') {
+		if c == 'L' && (input[i+1] == 'J' || input[i+1] == 'j') {
 			fmt.Printf("Љ")
 			digraf = true
-		} else if c == rune('l') && (input[i+1] == rune('J') || input[i+1] == 'j') {
+		} else if c == 'l' && (input[i+1] == 'J' || input[i+1] == 'j') {
 			fmt.Printf("љ")
 			digraf = true
-		} else if c == rune('N') && (input[i+1] == rune('J') || input[i+1] == 'j') {
+		} else if c == 'N' && (input[i+1] == 'J' || input[i+1] == 'j') {
 			fmt.Printf("Њ")
 			digraf = true
-		} else if c == rune('n') && (input[i+1] == rune('J') || input[i+1] == 'j') {
+		} else if c == 'n' && (input[i+1] == 'J' || input[i+1] == 'j') {
 			fmt.Printf("њ")
 			digraf = true
-		} else if c == rune('D') && (input[i+1] == rune('Ž') || input[i+1] == 'ž') {
+		} else if c == 'D' && (input[i+1] == 'Ž' || input[i+1] == 'ž') {
 			fmt.Printf("Џ")
 			digraf = true
-		} else if c == rune('d') && (input[i+1] == rune('Ž') || input[i+1] == 'ž') {
+		} else if c == 'd' && (input[i+1] == 'Ž' || input[i+1] == 'ž') {
 			fmt.Printf("џ")
 			digraf = true
 		} else {
