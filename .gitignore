@@ -1,3 +1,4 @@
 latcir.exe
 latcir
-.vscode
+.vscode/
+.vscode/*
