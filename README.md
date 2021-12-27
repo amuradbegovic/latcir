@@ -1,2 +1,3 @@
-Program za pretvaranje latinice u ćirilicu. 
+Program za pretvaranje latinice u ćirilicu.
+
 Програм за претварање латинице у ћирилицу.
