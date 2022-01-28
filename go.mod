@@ -1,3 +1,3 @@
-module github.com/amuradbegovic/latcir-go
+module github.com/amuradbegovic/latcir
 
 go 1.17
