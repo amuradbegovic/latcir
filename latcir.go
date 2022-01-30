@@ -1,9 +1,9 @@
 package latcir
 
-func Latcir(input []rune) string {
+var lat = []rune("ABCČĆDĐEFGHIJKLMNOPRSŠTUVZŽabcčćdđefghijklmnoprsštuvzž")
+var cir = []rune("АБЦЧЋДЂЕФГХИЈКЛМНОПРСШТУВЗЖабцчћдђефгхијклмнопрсштувзж")
 
-	lat := []rune("ABCČĆDĐEFGHIJKLMNOPRSŠTUVZŽabcčćdđefghijklmnoprsštuvzž")
-	cir := []rune("АБЦЧЋДЂЕФГХИЈКЛМНОПРСШТУВЗЖабцчћдђефгхијклмнопрсштувзж")
+func Latcir(input []rune) string {
 
 	var output string
 	var digraf, grafem bool = false, false
@@ -48,5 +48,51 @@ func Latcir(input []rune) string {
 		}
 
 	}
+	return output
+}
+
+func Cirlat(input []rune) string {
+
+	var output string
+	var digraf, grafem bool = false, false
+
+	for i, c := range input {
+		if c == 'Љ' {
+			output = output + "Lj"
+			digraf = true
+		} else if c == 'љ' {
+			output = output + "lj"
+			digraf = true
+		} else if c == 'Њ' {
+			output = output + "Nj"
+			digraf = true
+		} else if c == 'њ' {
+			output = output + "nj"
+			digraf = true
+		} else if c == 'Џ' {
+			output = output + "Dž"
+			digraf = true
+		} else if c == 'џ' {
+			output = output + "dž"
+			digraf = true
+		}
+		if digraf {
+			digraf = false
+			continue
+		}
+		for k, slovo := range cir {
+			if input[i] == slovo {
+				output = output + string(lat[k])
+				grafem = true
+				break
+			}
+		}
+		if !grafem {
+			output = output + string(c)
+		} else {
+			grafem = false
+		}
+	}
+
 	return output
 }

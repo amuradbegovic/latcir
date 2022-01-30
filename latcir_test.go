@@ -38,3 +38,15 @@ func TestLNaKraju(t *testing.T) {
 		t.Fatalf(`Latcir("val") = %q, trazio sam %q`, rezultat, trazim)
 	}
 }
+
+func TestCirLat(t *testing.T) {
+
+	rijeci := []rune("Њива, трактор")
+	trazim := "Njiva, traktor"
+	rezultat := Cirlat(rijeci)
+
+	if rezultat != trazim {
+		t.Fatalf(`Cirlat("Њива, трактор") = %q, trazio sam %q`, rezultat, trazim)
+	}
+
+}
