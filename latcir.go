@@ -51,6 +51,7 @@ func Latcir(input []rune) string {
 	return output
 }
 
+// Originalna funkcija se skoro potpuno ponavlja. Moram pronaći pametnije rješenje.
 func Cirlat(input []rune) string {
 
 	var output string
